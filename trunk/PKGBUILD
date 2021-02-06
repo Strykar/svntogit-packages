@@ -95,6 +95,7 @@ package_pipewire-docs() {
 package_pipewire-jack() {
   pkgdesc+=" (JACK support)"
   depends=(pipewire libpipewire-$_ver.so libjack.so)
+  conflicts=(jack jack2)
   mv jack/* "$pkgdir"
 }
 
